@@ -185,7 +185,7 @@ Short device layout
         margin: 10px;
     }
     .hero-img{
-        margin-top: 50px;
+        margin-top: 53px;
         margin-bottom: 0%;
     }
     .hero-img > img{
@@ -218,6 +218,7 @@ Short device layout
     }
     .footer-link{
         margin-top: 10px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
     }
