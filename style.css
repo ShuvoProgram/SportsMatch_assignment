@@ -19,6 +19,7 @@ hero-section
     height: 550px;
     border-radius: 20px;
     background-color: darkslategray;
+    animation: hero-animation 6s ease-in-out  1s infinite alternate;
 }
 .hero-text, .hero-img{
     margin: 20px auto;
@@ -44,9 +45,12 @@ hero-section
 .btn{
     text-decoration: none;
     color: whitesmoke;
-    background-color: rebeccapurple;
+    background-color: hsl(270, 50%, 40%);
     border-radius: 10px;
     padding: 10px 30px;
+}
+.btn-match:active{
+    background-color: red;
 }
 /* -----------------
 sports-match-section
@@ -89,9 +93,16 @@ sports-match-section
 }
 .match-item{
     width: 300px;
-    height: 300px;
+    height: 350px;
     border: 1px solid lightgray;
     border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+.match-item:hover{
+    transform: scale(1);
+    box-shadow: 14px 10px 10px lightgray;
+    z-index: 2;
 }
 .details-para{
     margin-top: 20px;
@@ -120,6 +131,9 @@ sports-match-section
     border-radius: 10px;
     background-color: blueviolet;
 }
+.see-more{
+    display: none;
+}
 /* --------------
 footer-section
 ----------------- */
@@ -147,6 +161,35 @@ hr{
     margin-left: 30px;
     color: white;
     text-decoration: none;
+}
+/* ---------------------------Pages- Upcoming-match--------------------- */
+.match-fixture{
+    width: 300px;
+    height: 200px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+}
+#large-img{
+    width: 100px;
+    height: 58px;
+}
+.match-flag, .match-date{
+    justify-items: center;
+    margin: 20px 20px;
+}
+.vs{
+    margin: 10px;
+}
+.match-date{
+    text-align: center;
+}
+.country-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.schedule{
+    margin-top: 10px;
 }
 
 /* ------------------------------------Responsive-layout------------------------------- */
@@ -189,6 +232,18 @@ medium device layout
     #tab-block{
         display: none;
     }
+    .see-more{
+        display: contents;
+    }
+    .see-more > a{
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: blueviolet;
+    }
+    
     .footer-link{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -251,5 +306,17 @@ Short device layout
     }
     .footer-link> a{
         margin-top: 10px;
+    }
+}
+/* --------------------Animation--------------- */
+@keyframes hero-animation {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
     }
 }
