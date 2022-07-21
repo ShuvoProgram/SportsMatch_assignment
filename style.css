@@ -164,6 +164,15 @@ hr{
     color: white;
     text-decoration: none;
 }
+.social-icon{
+    color: white;
+    font-size: 20px;
+    margin: 20px auto;
+}
+.social-icon > i {
+    margin-left: 10px;
+}
+
 /* ---------------------------Pages- Upcoming-match--------------------- */
 .match-fixture{
     width: 300px;
@@ -245,7 +254,9 @@ medium device layout
         color: white;
         background-color: blueviolet;
     }
-    
+    footer{
+        height: 350px;
+    }
     .footer-link{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
